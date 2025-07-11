@@ -1,7 +1,7 @@
 # Realtime Data Streaming Pipeline
 
 ## Overview
-In this self-project, we set up an end-to-end data streaming pipeline in realtime using Docker Compose. To accomplish this taks, we will integrate different components such as Apache Airflow, Apache Kafka, Apache Spark, Confluent Control Center, Confluent Schema Registry, PostgreSQL, and Cassandra. 
+In this self-project, we set up an end-to-end data streaming pipeline in realtime using Docker Compose. To accomplish this task, we will integrate different components such as Apache Airflow, Apache Kafka, Apache Spark, Confluent Control Center, Confluent Schema Registry, PostgreSQL, and Cassandra. 
 The pipeline works as follows:
 - Using Airflow, we run a DAG (`kafka_stream.py`) that retrieves user data from the Random User API, in intervals, and sends it to a Kafka topic (`users_created`).
 - Spark is configured with connectors to Kafka and Cassandra, it consumes the user data events from Kafka and then stores them into a Cassandra database.
